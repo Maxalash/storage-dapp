@@ -1,5 +1,5 @@
 import { BigNumber, Contract, providers, utils } from "ethers";
-import div from "next/head";
+import Head from "next/head";
 import Image from "next/image";
 import React, { use, useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
@@ -135,7 +135,10 @@ export default function Home() {
   }, [walletConnected]);
 
   return (
-
+    <>
+    <Head>
+      <title>DeStorage</title>
+    </Head>
     <div>
       <div className={styles.back}></div>
 
@@ -161,5 +164,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </>
   );
 }
